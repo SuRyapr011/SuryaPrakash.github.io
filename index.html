@@ -1032,7 +1032,7 @@
     <li><a href="#projects">projects</a></li>
     <li><a href="#connect">connect</a></li>
   </ul>
-  <button class="edit-toggle" onclick="openPasswordModal()">⚙ edit</button>
+  <!-- edit access: secret shortcut only -->
 </nav>
 
 <!-- Password modal -->
@@ -1382,7 +1382,7 @@
           </svg>
         </div>
         <div class="connect-name">Email</div>
-        <div class="connect-handle">suryaprakashrao@email.com</div>
+        <div class="connect-handle"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff8c8a8d869e8f8d9e949e8c978d9e90bf9a929e9693d19c9092">[email&#160;protected]</a></div>
         <span class="connect-tag">coming soon</span>
       </div>
     </div>
@@ -1394,7 +1394,7 @@
   <p>built with <span>♥</span> by Surya Prakashrao &nbsp;·&nbsp; <span>© 2025</span> &nbsp;·&nbsp; android dev &nbsp;·&nbsp; <span style="color:var(--cyan)">always learning</span></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Project data
   const projects = {
     groomtribe: {
@@ -1610,17 +1610,4 @@
       if (window.scrollY >= s.offsetTop - 100) current = s.id;
     });
     navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--purple)' : '';
-    });
-  });
-
-  // Keyboard close
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      closeProjectModal();
-      closePasswordModal();
-    }
-  });
-</script>
-</body>
-</html>
+      a.style.color = a.getAttribute('href') === '#' +
